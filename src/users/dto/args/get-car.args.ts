@@ -2,8 +2,8 @@ import { ArgsType, Field } from '@nestjs/graphql';
 import { IsNotEmpty } from 'class-validator';
 
 @ArgsType()
-export class GetUserArgs {
+export class GetCarArgs {
   @Field()
   @IsNotEmpty()
-  userId: string;
+  carId: string;
 }
