@@ -1,2 +1,7 @@
 ## Description
-- This is a guide if incase I've develop a server-side application using NestJS, GraphQL, and TypeScript in the future.
+- This is only a guide for future NestJS, GraphQL, and TypeScript initial setup.
+
+## Technology Stack
+- GraphQL
+- NestJS
+- TypeScript
