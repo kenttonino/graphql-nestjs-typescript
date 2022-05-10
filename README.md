@@ -1,5 +1,5 @@
 ## Description
-- This is only a guide for future projects.
+- This is only a template for future projects.
 
 ## Technology Stack
 - GraphQL
