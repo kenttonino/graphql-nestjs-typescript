@@ -1,5 +1,5 @@
 {
-  "name": "graphql-nestjs-typescript",
+  "name": "backend",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -18,22 +18,32 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "typeorm": "OPT_ENV=cli ts-node ./node_modules/typeorm/cli.js",
+    "migration:generate": "npm run build && npm run typeorm migration:generate -- -n",
+    "migration:run": "npm run build && npm run typeorm migration:run",
+    "migration:revert": "npm run build && npm run typeorm migration:revert"
   },
   "dependencies": {
     "@nestjs/apollo": "^10.0.9",
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^2.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/graphql": "^10.0.10",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/typeorm": "^8.0.3",
     "@types/uuid": "^8.3.4",
     "apollo-server-express": "^3.6.7",
     "class-validator": "^0.13.2",
+    "dotenv": "^16.0.0",
     "graphql": "^16.4.0",
     "graphql-tools": "^8.2.8",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.38",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
@@ -56,7 +66,7 @@
     "ts-jest": "^27.0.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
-    "tsconfig-paths": "^3.10.1",
+    "tsconfig-paths": "^3.14.1",
     "typescript": "^4.3.5"
   },
   "jest": {
