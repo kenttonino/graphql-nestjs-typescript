@@ -6,7 +6,8 @@
 - TypeScript
 - TypeORM
 - NodeJS
-- PostgresSQL
+- PostgreSQL
+- Docker
 
 ## Setup Docker
 1. Delete node_modules and Run the following commands:
